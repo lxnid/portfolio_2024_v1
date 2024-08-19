@@ -22,7 +22,7 @@ export const Work = () => {
 	return (
 		<motion.section
 			initial={{ y: 48, opacity: 0 }}
-			whileInView={{ y: 0, opacity: 1 }}
+			whileInView={{ y: 0, opacity: 0.99 }}
 			transition={{ ease: "easeInOut", duration: 0.75 }}
 			id="sectionWork"
 			className={`h-auto min-h-[80vh] w-full flex flex-col justify-start items-center pt-16`}

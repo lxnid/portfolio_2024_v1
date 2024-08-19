@@ -22,14 +22,14 @@ const About = () => {
 				<div className="w-10/12 md:w-3/4 text-wrap">
 					<motion.p
 						initial={{ y: 48, opacity: 0 }}
-						whileInView={{ y: 0, opacity: 1 }}
+						whileInView={{ y: 0, opacity: 0.99 }}
 						transition={{ ease: "easeInOut", duration: 0.75 }}
 					>
 						About me
 					</motion.p>
 					<motion.h1
 						initial={{ y: 48, opacity: 0 }}
-						whileInView={{ y: 0, opacity: 1 }}
+						whileInView={{ y: 0, opacity: 0.99 }}
 						transition={{ ease: "easeInOut", duration: 1 }}
 						className={`${fontRal.className} text-[34px] sm:text-[36px] md:text-[50px] lg:text-[60px] xl:text-[80px] leading-tight sm:leading-none mt-10`}
 					>

@@ -7,6 +7,7 @@ import { Hero } from "./components/hero";
 import About from "./components/about";
 import { Work } from "./components/work";
 import Gallery from "./components/webgallery";
+import FixedBackground from "./components/FixedBackground";
 
 export default function Home() {
 	const [backgroundColor, setBackgroundColor] = useState("#000000");
@@ -62,16 +63,13 @@ export default function Home() {
 			transition={{ duration: 1, ease: "easeInOut" }}
 		>
 			<main className="overflow-hidden sm:overflow-visible">
+				<FixedBackground color={backgroundColor}/>
 				<Sidebar />
-				<div>
-					{/* <ReactLenis root options={{ lerp: 0.05 }}> */}
-					<Hero />
-					<About />
-					<Work />
-					<Gallery />
-					<div className="h-[100vh]"/>
-					{/* </ReactLenis> */}
-				</div>
+				<Hero />
+				<About />
+				<Work />
+				<Gallery />
+				<div className="h-[100vh]" />
 			</main>
 		</motion.div>
 	);
