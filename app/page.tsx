@@ -11,36 +11,45 @@ import FixedBackground from "./components/FixedBackground";
 import { HoverImageLinks } from "./components/HoverImageLinks";
 import MyStory from "./components/MyStory";
 
-export default function Home() {
-	const [backgroundColor, setBackgroundColor] = useState("#000000");
-	const [textColor, setTextColor] = useState("#ffffff");
-
-	const sectionStyles = {
-		sectionWork: {
-			backgroundColor: "#ffffff",
-			textColor: "#000000",
-		},
-		sectionAbout: {
-			backgroundColor: "#000000",
-			textColor: "#ffffff",
-		},
-		sectionHero: {
-			backgroundColor: "#000000",
-			textColor: "#ffffff",
-		},
-		sectionGallery: {
-			backgroundColor: "#000000",
-			textColor: "#ffffff",
-		},
-		sectionMenu: {
-			backgroundColor: "#000000",
-			textColor: "#ffffff",
-		},
-		sectionStory: {
-			backgroundColor: "#000000",
-			textColor: "#ffffff",
-		},
+// Define the type for section styles
+interface SectionStyles {
+	[key: string]: {
+		backgroundColor: string;
+		textColor: string;
 	};
+}
+
+// Define section styles
+const sectionStyles: SectionStyles = {
+	sectionWork: {
+		backgroundColor: "#ffffff",
+		textColor: "#000000",
+	},
+	sectionAbout: {
+		backgroundColor: "#000000",
+		textColor: "#ffffff",
+	},
+	sectionHero: {
+		backgroundColor: "#000000",
+		textColor: "#ffffff",
+	},
+	sectionGallery: {
+		backgroundColor: "#000000",
+		textColor: "#ffffff",
+	},
+	sectionMenu: {
+		backgroundColor: "#000000",
+		textColor: "#ffffff",
+	},
+	sectionStory: {
+		backgroundColor: "#000000",
+		textColor: "#ffffff",
+	},
+};
+
+export default function Home() {
+	const [backgroundColor, setBackgroundColor] = useState<string>("#000000");
+	const [textColor, setTextColor] = useState<string>("#ffffff");
 
 	const handleScroll = () => {
 		const sections = document.querySelectorAll("section");
@@ -51,12 +60,17 @@ export default function Home() {
 			const sectionHeight = section.offsetHeight;
 			const sectionId = section.getAttribute("id");
 
-			if (
-				scrollPosition >= sectionTop &&
-				scrollPosition < sectionTop + sectionHeight
-			) {
-				setBackgroundColor(sectionStyles[sectionId].backgroundColor);
-				setTextColor(sectionStyles[sectionId].textColor);
+			// Ensure sectionId is not null before using it
+			if (sectionId && sectionStyles[sectionId]) {
+				if (
+					scrollPosition >= sectionTop &&
+					scrollPosition < sectionTop + sectionHeight
+				) {
+					setBackgroundColor(
+						sectionStyles[sectionId].backgroundColor
+					);
+					setTextColor(sectionStyles[sectionId].textColor);
+				}
 			}
 		});
 	};
@@ -81,7 +95,7 @@ export default function Home() {
 					<HoverImageLinks />
 					<Work />
 					<Gallery />
-					<MyStory/>
+					<MyStory />
 				</main>
 			</motion.div>
 		</ReactLenis>
