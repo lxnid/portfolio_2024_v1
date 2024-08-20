@@ -19,7 +19,7 @@ export const HoverImageLinks = () => {
           heading="Projects"
           subheading="My work speaks for itself"
           imgSrc="https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          href="#sectionProjects"
+          href="#sectionWork"
         />
         <Link
           heading="Testimonials"
@@ -31,7 +31,7 @@ export const HoverImageLinks = () => {
           heading="Experience"
           subheading="Had a cool journey"
           imgSrc="https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          href="#sectionExperience"
+          href="#sectionStory"
         />
         <Link
           heading="Social"
