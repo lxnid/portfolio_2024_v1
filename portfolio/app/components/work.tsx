@@ -321,6 +321,7 @@ const OverlayCopy = ({
 	});
 
 	const y = useTransform(scrollYProgress, [0, 1], [250, -250]);
+	const yslow = useTransform(scrollYProgress, [0, 1], [50, -50]);
 	const opacity = useTransform(scrollYProgress, [0.25, 0.5, 0.75], [0, 1, 0]);
 
 	return (
@@ -335,9 +336,9 @@ const OverlayCopy = ({
 			<p className="mb-2 text-center text-xl md:mb-4 md:text-3xl">
 				{subheading}
 			</p>
-			<p className="text-center text-8xl font-bold md:text-9xl font-dahlia">
+			<motion.p style={{y: yslow}} className="text-center text-8xl font-bold md:text-9xl font-dahlia">
 				{heading}
-			</p>
+			</motion.p>
 		</motion.div>
 	);
 };

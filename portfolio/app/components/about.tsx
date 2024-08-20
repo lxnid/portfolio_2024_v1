@@ -17,7 +17,7 @@ const About = () => {
 		<ReactLenis root options={{ lerp: 0.05 }}>
 			<section
 				id="sectionAbout"
-				className={`h-auto md:min-h-[80vh] w-full flex flex-col justify-start items-center`}
+				className={`h-auto md:min-h-[80vh] w-full flex flex-col justify-start items-center md:pt-[5vh]`}
 			>
 				<div className="w-10/12 md:w-3/4 text-wrap">
 					<motion.p

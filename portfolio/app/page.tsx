@@ -8,6 +8,7 @@ import About from "./components/about";
 import { Work } from "./components/work";
 import Gallery from "./components/webgallery";
 import FixedBackground from "./components/FixedBackground";
+import { HoverImageLinks } from "./components/HoverImageLinks";
 
 export default function Home() {
 	const [backgroundColor, setBackgroundColor] = useState("#000000");
@@ -27,6 +28,10 @@ export default function Home() {
 			textColor: "#ffffff",
 		},
 		sectionGallery: {
+			backgroundColor: "#000000",
+			textColor: "#ffffff",
+		},
+		sectionMenu: {
 			backgroundColor: "#000000",
 			textColor: "#ffffff",
 		},
@@ -57,20 +62,23 @@ export default function Home() {
 	}, []);
 
 	return (
-		<motion.div
-			style={{ backgroundColor, color: textColor }}
-			className="w-full h-full min-h-screen"
-			transition={{ duration: 1, ease: "easeInOut" }}
-		>
-			<main className="overflow-hidden sm:overflow-visible">
-				<FixedBackground color={backgroundColor}/>
-				<Sidebar />
-				<Hero />
-				<About />
-				<Work />
-				<Gallery />
-				<div className="h-[100vh]" />
-			</main>
-		</motion.div>
+		<ReactLenis root options={{ lerp: 0.05 }}>
+			<motion.div
+				style={{ backgroundColor, color: textColor }}
+				className="w-full h-full min-h-screen"
+				transition={{ duration: 1, ease: "easeInOut" }}
+			>
+				<main className="overflow-hidden sm:overflow-visible">
+					<FixedBackground color={backgroundColor} />
+					<Sidebar />
+					<Hero />
+					<About />
+					<HoverImageLinks />
+					<Work />
+					<Gallery />
+					<div className="h-[100vh]" />
+				</main>
+			</motion.div>
+		</ReactLenis>
 	);
 }

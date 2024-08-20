@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa6";
 import { FiMenu } from "react-icons/fi";
+import ScrollLink from "./ScrollLink";
 
 const Sidebar = () => {
 	return (
@@ -44,16 +45,21 @@ const Sidebar = () => {
 							<FaLinkedin className="text-xl" />
 						</Link>
 					</span>
-					<span className="flex flex-col gap-20 flex-grow justify-center">
-						<Link
+					<span className="flex flex-col gap-20 flex-grow justify-end pb-[10vh]">
+						{/* <Link
 							className="transition ease-out duration-300 hover:opacity-50 hover:scale-105"
-							href={"/"}
+							href={"#sectionMenu"}
 						>
 							<p className="text-xs font-medium -rotate-90 ">
-								Work
+								Menu
 							</p>
-						</Link>
-						<Link
+						</Link> */}
+						<ScrollLink id={"sectionMenu"}>
+							<p className="text-xs font-medium -rotate-90 ">
+								Menu
+							</p>
+						</ScrollLink>
+						{/* <Link
 							className="transition ease-out duration-300 hover:opacity-50 hover:scale-105"
 							href={"/"}
 						>
@@ -68,7 +74,7 @@ const Sidebar = () => {
 							<p className="text-xs font-medium -rotate-90 ">
 								Blog
 							</p>
-						</Link>
+						</Link> */}
 					</span>
 				</div>
 			</div>
