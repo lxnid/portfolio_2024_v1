@@ -10,6 +10,7 @@ import { FaLink } from "react-icons/fa6";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { BiLogoSpotify, BiLogoTypescript } from "react-icons/bi";
 import { CgFramer } from "react-icons/cg";
+import FramerMagnetic from "@/app/components/framerMagnetic";
 
 export const Work = () => {
 	const shouldAnimate = true;
@@ -28,7 +29,7 @@ export const Work = () => {
 			className={`h-auto min-h-[80vh] w-full flex flex-col justify-start items-center pt-16`}
 		>
 			<motion.div
-				style={shouldAnimate ? { } : {}}
+				style={shouldAnimate ? {} : {}}
 				transition={{
 					type: "spring",
 					stiffness: 300,
@@ -218,13 +219,10 @@ const Project = ({
 					<div className="w-full">
 						<h1 className="font-bold text-sm">Technologies used</h1>
 						<div className="flex p-2 gap-2">
-							{icon1}
-
-							{icon2}
-
-							{icon3}
-
-							{icon4}
+							<FramerMagnetic className={""}>{icon1}</FramerMagnetic>
+							<FramerMagnetic className={""}>{icon2}</FramerMagnetic>
+							<FramerMagnetic className={""}>{icon3}</FramerMagnetic>
+							<FramerMagnetic className={""}>{icon4}</FramerMagnetic>
 						</div>
 					</div>
 				</div>
@@ -281,7 +279,7 @@ const StickyImage = ({ imgUrl }: { imgUrl: string }) => {
 
 	const scale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
 	const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
-	const borderRadius = useTransform(scrollYProgress, [0, 1], ["0px", "50px"]); 
+	const borderRadius = useTransform(scrollYProgress, [0, 1], ["0px", "50px"]);
 
 	return (
 		<motion.div
@@ -336,7 +334,10 @@ const OverlayCopy = ({
 			<p className="mb-2 text-center text-xl md:mb-4 md:text-3xl">
 				{subheading}
 			</p>
-			<motion.p style={{y: yslow}} className="text-center text-8xl font-bold md:text-9xl font-dahlia">
+			<motion.p
+				style={{ y: yslow }}
+				className="text-center text-8xl font-bold md:text-9xl font-dahlia"
+			>
 				{heading}
 			</motion.p>
 		</motion.div>

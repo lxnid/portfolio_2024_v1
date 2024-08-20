@@ -4,6 +4,7 @@ import { Raleway } from "next/font/google";
 import { motion } from "framer-motion";
 import { ReactLenis } from "lenis/react";
 
+
 const fontRal = Raleway({
 	subsets: ["latin"],
 	weight: "700",

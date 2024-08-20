@@ -12,7 +12,7 @@ const Gallery = () => {
 	return (
 		<section
 			id="sectionGallery"
-            className="flex w-full min-h-screen h-[200vh] relative"
+            className="flex w-full min-h-screen h-[140vh] md:h-[200vh] relative"
             data-bgcolor="#000000"
 			data-textcolor="#ffffff"
 			ref={ref}

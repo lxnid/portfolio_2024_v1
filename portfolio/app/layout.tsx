@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import Sidebar from "./components/sidebar";
+import Head from "next/head";
+import Footer from "./components/Footer";
 
 const fontPop = Poppins({
 	subsets: ["latin"],
@@ -23,7 +24,16 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${fontPop.className}`}>{children}</body>
+			<head>
+				<link
+					rel="stylesheet"
+					href="https://cdn.jsdelivr.net/gh/veritablestudios/colored-icons@1.7.8/src/app/ci.min.css"
+				/>
+			</head>
+			<body className={`${fontPop.className}`}>
+				{children}
+				<Footer/>
+			</body>
 		</html>
 	);
 }

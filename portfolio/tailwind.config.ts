@@ -8,6 +8,15 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+			animation: {
+				"infinite-scroll": "infinite-scroll 80s linear infinite",
+			},
+			keyframes: {
+				"infinite-scroll": {
+					from: { transform: "translate(0)" },
+					to: { transform: "translate(-100%)" },
+				},
+			},
 			backgroundImage: {
 				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
 				"gradient-conic":

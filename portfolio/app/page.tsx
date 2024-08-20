@@ -9,6 +9,7 @@ import { Work } from "./components/work";
 import Gallery from "./components/webgallery";
 import FixedBackground from "./components/FixedBackground";
 import { HoverImageLinks } from "./components/HoverImageLinks";
+import MyStory from "./components/MyStory";
 
 export default function Home() {
 	const [backgroundColor, setBackgroundColor] = useState("#000000");
@@ -32,6 +33,10 @@ export default function Home() {
 			textColor: "#ffffff",
 		},
 		sectionMenu: {
+			backgroundColor: "#000000",
+			textColor: "#ffffff",
+		},
+		sectionStory: {
 			backgroundColor: "#000000",
 			textColor: "#ffffff",
 		},
@@ -76,7 +81,7 @@ export default function Home() {
 					<HoverImageLinks />
 					<Work />
 					<Gallery />
-					<div className="h-[100vh]" />
+					<MyStory/>
 				</main>
 			</motion.div>
 		</ReactLenis>
