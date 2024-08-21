@@ -92,10 +92,10 @@ export default function Home() {
 					<Sidebar />
 					<Hero />
 					<About />
-					<HoverImageLinks />
 					<Work />
 					<Gallery />
 					<MyStory />
+					<HoverImageLinks />
 				</main>
 			</motion.div>
 		</ReactLenis>

@@ -42,8 +42,7 @@ const MyStory = () => {
 								className="cardCustom md:col-span-2 h-full cursor-pointer rounded-3xl bg-[#7e6a6a7e] text-[#ffffffc6] p-10 px-[10%] text-xl flex-grow flex justify-center items-center"
 							>
 								Extensive experience and the deep understanding
-								of the field, fuels my passion for building
-								impactful user experiences. I thrive on
+								of the field, fuels my passion for exploring wonders of the tech world. I thrive on
 								transforming complex challenges into
 								elegant, user-centric solutions.
 							</motion.div>
@@ -89,7 +88,8 @@ const MyStory = () => {
 									className="cardCustom w-full h-full cursor-pointer p-3 rounded-3xl bg-[#7e6a6a7e] flex justify-start items-end font-bold text-[30px]"
 								>
 									<Link
-										href={""}
+										href={"https://open.spotify.com/playlist/02kKG4CTFG7wHsBQnLvJpP?si=56021822ba2f472f"}
+										target="_"
 										className="w-16 h-16 bg-green-500 pl-1 text-black shadow-md rounded-full flex justify-center items-center transition ease-in duration-300 hover:scale-105"
 									>
 										<FaPlay />

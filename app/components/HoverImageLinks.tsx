@@ -6,21 +6,15 @@ export const HoverImageLinks = () => {
   return (
     <section
       id="sectionMenu"
-      className="p-4 md:p-8 relative h-[105vh] flex md:block items-center"
+      className="p-4 md:p-8 relative h-[110vh] flex md:block items-center md:mt-[15vh]"
     >
       <motion.div className="mx-auto max-w-5xl sticky top-20">
-        <Link
-          heading="About"
-          subheading="Learn more about me"
-          imgSrc="https://images.unsplash.com/photo-1623479322729-28b25c16b011?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          href="#sectionAbout"
-        />
-        <Link
+        {/* <Link
           heading="Projects"
           subheading="My work speaks for itself"
           imgSrc="https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           href="#sectionWork"
-        />
+        /> */}
         <Link
           heading="Testimonials"
           subheading="I work with great people"
@@ -34,10 +28,17 @@ export const HoverImageLinks = () => {
           href="#sectionStory"
         />
         <Link
-          heading="Social"
-          subheading="Let's get social"
+          heading="Contact"
+          subheading="Let's get to know everyone"
           imgSrc="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           href="#sectionSocial"
+        />
+        <Link
+          heading="Resumé"
+          subheading="Learn more about me"
+          // imgSrc="https://images.unsplash.com/photo-1623479322729-28b25c16b011?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          imgSrc="/DSC_0143.jpg"
+          href="#sectionAbout"
         />
       </motion.div>
     </section>
@@ -148,7 +149,7 @@ const Link = ({ heading, imgSrc, subheading, href }: LinkProps) => {
         }}
         transition={{ type: "spring" }}
         src={imgSrc}
-        className="absolute z-0 h-24 w-32 rounded-lg object-cover md:h-48 md:w-64"
+        className="absolute z-0 h-24 w-32 rounded-lg object-contain md:h-60 md:w-96"
         alt={`Image representing a link for ${heading}`}
       />
 

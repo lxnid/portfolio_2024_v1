@@ -4,7 +4,6 @@ import { Raleway } from "next/font/google";
 import { motion } from "framer-motion";
 import { ReactLenis } from "lenis/react";
 
-
 const fontRal = Raleway({
 	subsets: ["latin"],
 	weight: "700",
@@ -34,10 +33,10 @@ const About = () => {
 						transition={{ ease: "easeInOut", duration: 1 }}
 						className={`${fontRal.className} text-[34px] sm:text-[36px] md:text-[50px] lg:text-[60px] xl:text-[80px] leading-tight sm:leading-none mt-10`}
 					>
-						Software engineer based in Colombo.{" "}
+						Comp. Sci Student based in Colombo,{" "}
 						<span className="opacity-45">
-							I build and manage innovative, creative and
-							user-centred software experiences.
+							On a quest to harness technology for creative,
+							impactful and transformative solutions.
 						</span>
 					</motion.h1>
 					<motion.p

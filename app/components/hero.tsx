@@ -13,7 +13,7 @@ export const Hero = () => {
 	let shouldAnimate = true;
 
 	const { scrollYProgress } = useScroll();
-	const x1 = useTransform(scrollYProgress, [0, 1], [250, -8000]);
+	const x1 = useTransform(scrollYProgress, [0, 1], [250, -18000]);
 	const x2 = useTransform(scrollYProgress, [0, 1], [-500, 5000]);
 	return (
 		// <ReactLenis root options={{lerp: 0.05,}}>
