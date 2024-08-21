@@ -219,10 +219,18 @@ const Project = ({
 					<div className="w-full">
 						<h1 className="font-bold text-sm">Technologies used</h1>
 						<div className="flex p-2 gap-2">
-							<FramerMagnetic className={""}>{icon1}</FramerMagnetic>
-							<FramerMagnetic className={""}>{icon2}</FramerMagnetic>
-							<FramerMagnetic className={""}>{icon3}</FramerMagnetic>
-							<FramerMagnetic className={""}>{icon4}</FramerMagnetic>
+							<FramerMagnetic className={""}>
+								{icon1}
+							</FramerMagnetic>
+							<FramerMagnetic className={""}>
+								{icon2}
+							</FramerMagnetic>
+							<FramerMagnetic className={""}>
+								{icon3}
+							</FramerMagnetic>
+							<FramerMagnetic className={""}>
+								{icon4}
+							</FramerMagnetic>
 						</div>
 					</div>
 				</div>
@@ -292,6 +300,9 @@ const StickyImage = ({ imgUrl }: { imgUrl: string }) => {
 				scale,
 				borderRadius,
 			}}
+			initial={{ y: 48, opacity: 0 }}
+			whileInView={{ y: 0, opacity: 0.99 }}
+			transition={{ ease: "easeInOut", duration: 2 }}
 			ref={targetRef}
 			className="sticky z-0 overflow-hidden"
 		>

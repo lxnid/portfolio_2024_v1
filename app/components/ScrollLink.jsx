@@ -37,7 +37,7 @@ function ScrollLink({ id, children }) {
 		const element = document.getElementById(id);
 
 		if (element) {
-			scrollToElement(element, 4000); // Adjust duration as needed
+			scrollToElement(element, 8000); // Adjust duration as needed
 		}
 	};
 

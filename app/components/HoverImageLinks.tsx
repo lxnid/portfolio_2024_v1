@@ -16,16 +16,16 @@ export const HoverImageLinks = () => {
           href="#sectionWork"
         /> */}
         <Link
-          heading="Testimonials"
-          subheading="I work with great people"
-          imgSrc="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          href="#sectionTestimonials"
-        />
-        <Link
           heading="Experience"
           subheading="Had a cool journey"
           imgSrc="https://images.unsplash.com/photo-1535223289827-42f1e9919769?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           href="#sectionStory"
+        />
+        <Link
+          heading="Testimonials"
+          subheading="I work with great people"
+          imgSrc="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          href="#sectionTestimonials"
         />
         <Link
           heading="Contact"
